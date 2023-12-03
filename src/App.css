@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+.react-grid-item > .react-resizable-handle::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 30px;
+  height: 5px;
+  background-color: orange;
+  border-radius: 5px;
+  border: none;
+  box-shadow: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.react-grid-item {
+  border: 1px solid orange;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.react-grid-item::-webkit-scrollbar {
+  width: 12px; /* Adjust as needed */
+  height: 1px; /* Adjust as needed */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.react-grid-item::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Set the scrollbar thumb color to transparent */
 }
 
-.App-link {
-  color: #61dafb;
+.react-grid-item::-webkit-scrollbar-track {
+  background-color: transparent; /* Set the scrollbar track color to transparent */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.react-grid-item::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Change the hover color if needed */
+}
+
+.react-grid-item > .react-resizable-handle.react-resizable-handle-n {
+  transform: rotate(0deg);
+  top: -15px;
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-s {
+  transform: rotate(0deg);
+  bottom: -6px;
+}
+
+
+.react-grid-item > .react-resizable-handle.react-resizable-handle-e {
+  transform: rotate(90deg);
+  right: -15px;
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-w {
+  transform: rotate(90deg);
+  left: -6px;
+}
+
+
+/* ant-css */
+.ant-card {
+  height: 100%;
+}
+
+.ant-table-wrapper,
+.ant-form,
+.ant-collapse {
+  height: 100%;
+  overflow: auto;
 }
